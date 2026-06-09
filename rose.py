@@ -59,7 +59,7 @@ async def setup(ctx):
 
             "Não precisa ter pressa para se enturma, Às vezes uma amizade começa "
             "por uma música, uma conversa qualquer ou só pela companhia tranquila "
-            "de alguém. 🌿"
+            "de alguém. 🌿\n\n"
 
             "Caso você não saiba oque dizer, ou como dizer, por timidez apenas diga algo "
             "que você gosta, como por exemplo alguma musica que você gosta de ouvir ou tocar "
