@@ -97,4 +97,4 @@ async def setup(ctx):
 # Token do bot
 import os
 
-bot.run(os.getenv(""))
+bot.run(os.getenv("TOKEN"))
