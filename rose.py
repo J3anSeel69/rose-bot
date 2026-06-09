@@ -50,11 +50,11 @@ async def setup(ctx):
         title="🌙 Bem-vindo ao TV-Girls Night",
         description=(
             "Ola eu sou a Rose, eu procuro sempre mostra hospitalidade e dar as primeiras boas vindas "
-            "Pega um café, um chá ou só o cansaço da madrugada mesmo e fica à vontade.\n\n"
+            "pega um café, um chá ou só o cansaço da madrugada mesmo e fica à vontade.\n\n"
 
             "Esse é um cantinho que temos para converçar, ouvir músicas que dizem coisas "
             "que às vezes faltam palavras para explicar, jogos e aquelas prozas "
-            "que começam aleatórias e acabam ficando tão profundas que acabamos indo"
+            "que começam aleatórias e acabam ficando tão profundas que acabamos indo "
             "preparar um cafe ou chá pra continuar a converça.\n\n"
 
             "Não precisa ter pressa para se enturma, Às vezes uma amizade começa "
@@ -63,7 +63,7 @@ async def setup(ctx):
 
             "Caso você não saiba oque dizer, ou como dizer, por timidez apenas diga algo "
             "que você gosta, como por exemplo alguma musica que você gosta de ouvir ou tocar "
-            "um filme que você tenha assistido ultimamente e etc, mais nao se prenda a timidez, "
+            "um filme que você tenha assistido ultimamente e etc, mais não se prenda a timidez, "
             "entre nas converças tambem, tenho certeza que todos iram lhe acolher aqui.\n\n"
 
             "Bom agora eu vo procurar pelo Noah, ate Logo 😊"
