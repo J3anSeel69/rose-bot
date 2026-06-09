@@ -1,5 +1,26 @@
 import discord
 from discord.ext import commands
+from flask import Flask
+from threading import Thread
+import os
+
+app = Flask('')
+
+
+@app.route('/')
+def home():
+    return "Rose está viva 🌹"
+
+
+def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+
+def keep_alive():
+    t = Thread(target=run_web)
+    t.start()
+
 
 # Permissões do bot
 intents = discord.Intents.default()
@@ -96,5 +117,8 @@ async def setup(ctx):
 
 # Token do bot
 import os
+
+keep_alive()
+
 
 bot.run(os.getenv("TOKEN"))
