@@ -73,6 +73,7 @@ async def setup(ctx):
         return
 
     # Procurar canal
+    canal = discord.utils.get(
         ctx.guild.text_channels,
         name="boas-vindas"
     )
