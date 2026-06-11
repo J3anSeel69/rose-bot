@@ -6,6 +6,9 @@ import os
 
 app = Flask('')
 
+#comandos ativos
+oi_ativo = False
+setup_ativo = False
 
 @app.route('/')
 def home():
@@ -56,14 +59,20 @@ async def on_resumed():
 # Comando de teste
 @bot.command()
 async def oi(ctx):
+
+    if not oi_ativo:
+        return
+        
     await ctx.send("oi 😭🌹")
 
 # Comando para criar mensagem fixa
 @bot.command()
 async def setup(ctx):
 
+    if not setup_ativo:
+        return
+
     # Procurar canal
-    canal = discord.utils.get(
         ctx.guild.text_channels,
         name="boas-vindas"
     )
@@ -123,6 +132,31 @@ async def setup(ctx):
     await ctx.send(
         "Mensagem enviada e fixada no #boas-vindas 🌹"
     )
+
+#Mensagem fake nao conta pra ninguem
+@bot.command()
+async def msg(ctx, canal_nome, *, mensagem):
+
+    # Só você pode usar
+    if ctx.author.id != 1343655943828930560:
+        return
+
+    # Procurar canal
+    canal = discord.utils.get(
+        ctx.guild.text_channels,
+        name=canal_nome
+    )
+
+    # Caso não encontre
+    if canal is None:
+        await ctx.send("Não achei esse canal 😭")
+        return
+
+    # Apaga o comando
+    await ctx.message.delete()
+
+    # Rose envia mensagem
+    await canal.send(mensagem)
 
 # Token do bot
 import os
